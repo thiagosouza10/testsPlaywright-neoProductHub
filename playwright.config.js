@@ -7,14 +7,15 @@ export default defineConfig({
   workers: 8,
 
   reporter: [
-    ['line'],                   // mostra progresso no console
-    ['html'],                   // mantém relatório HTML padrão do Playwright
-    ['allure-playwright'],      // ativa o Allure
+    ['line'],
+    ['html'],
+    ['allure-playwright'],
   ],
 
   use: {
     trace: 'on-first-retry',
     headless: false,
+    screenshot: 'on',
   },
 
   projects: [
