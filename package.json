@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "testsbackend": "npx playwright test --project=backend",
+    "testsfrontend": "npx playwright test --project=frontend-*"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thiagosouza10/testsPlaywright-neoProductHub.git"
