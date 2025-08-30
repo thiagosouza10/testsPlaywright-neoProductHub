@@ -12,7 +12,7 @@
     "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
     "allure:clean-results": "rmdir /S /Q .\\allure-results",
     "allure:full": "npm run allure-history && npm run allure:prepare && npm run allure:generate && npm run allure:clean-results",
-    "tests": "playwright test && npm run allure:full && npx allure open ./allure-report"
+    "tests": "(playwright test || true) && npm run allure:full && npx allure open ./allure-report"
   },
   "repository": {
     "type": "git",

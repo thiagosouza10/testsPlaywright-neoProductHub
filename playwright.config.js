@@ -3,12 +3,10 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  retries: 1,
   workers: 8,
 
   reporter: [
     ['line'],
-    ['html'],
     ['allure-playwright'],
   ],
 
