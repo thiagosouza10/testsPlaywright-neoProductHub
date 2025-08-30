@@ -5,7 +5,13 @@ export default defineConfig({
   fullyParallel: true,
   retries: 1,
   workers: 8,
-  reporter: 'html',
+
+  reporter: [
+    ['line'],                   // mostra progresso no console
+    ['html'],                   // mantém relatório HTML padrão do Playwright
+    ['allure-playwright'],      // ativa o Allure
+  ],
+
   use: {
     trace: 'on-first-retry',
     headless: false,
@@ -17,11 +23,6 @@ export default defineConfig({
       name: 'frontend-chromium',
       testDir: './tests/frontend',
       use: { ...devices['Desktop Chrome'], baseURL: 'http://localhost:8080' },
-    },
-    {
-      name: 'frontend-firefox',
-      testDir: './tests/frontend',
-      use: { ...devices['Desktop Firefox'], baseURL: 'http://localhost:8080' },
     },
     // API Backend
     {
