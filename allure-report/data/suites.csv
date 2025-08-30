@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","81","Deve efetuar login com sucesso","backend","Sat Aug 30 14:34:47 GMT-03:00 2025","passed","Sat Aug 30 14:34:47 GMT-03:00 2025","Backend - Login","backend\login.spec.js","",""
-"","1789","Deve efetuar login com sucesso","frontend-chromium","Sat Aug 30 14:34:47 GMT-03:00 2025","passed","Sat Aug 30 14:34:49 GMT-03:00 2025","Frontend - Login","frontend\login.spec.js","",""
