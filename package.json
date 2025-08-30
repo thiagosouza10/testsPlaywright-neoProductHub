@@ -1,0 +1,22 @@
+{
+  "name": "testsplaywright-neoproducthub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagosouza10/testsPlaywright-neoProductHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagosouza10/testsPlaywright-neoProductHub/issues"
+  },
+  "homepage": "https://github.com/thiagosouza10/testsPlaywright-neoProductHub#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0"
+  }
+}
