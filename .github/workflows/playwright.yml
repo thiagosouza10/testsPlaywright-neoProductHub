@@ -29,7 +29,7 @@ jobs:
 
       - name: Start da aplicação
         run: |
-          npm run dev
+          Start-Process -FilePath "npm" -ArgumentList "run dev"
           sleep 10
         working-directory: ./app
    
