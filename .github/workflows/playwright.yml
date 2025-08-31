@@ -54,7 +54,9 @@ jobs:
           path: ./tests/allure-results
 
       - name: Gerando Allure Report
-        run: npx allure generate ./tests/allure-results -o ./tests/allure-report --clean
+        run: |
+          npm install --save-dev allure-commandline
+          npx allure generate ./tests/allure-results -o ./tests/allure-report --clean
         working-directory: ./tests
 
       - name: Publicar Allure Report no GitHub Pages
