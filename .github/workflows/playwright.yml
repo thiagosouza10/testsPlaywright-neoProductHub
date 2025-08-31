@@ -50,7 +50,7 @@ jobs:
         run: |
           dir
           npm install --save-dev allure-commandline
-          npx allure generate ./tests/allure-results -o ./tests/allure-report --clean
+          npx allure generate allure-results -o allure-report --clean
         working-directory: ./tests
 
       - name: Publicar Allure Report no GitHub Pages
