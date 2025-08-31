@@ -30,9 +30,10 @@ jobs:
       - name: Start da aplicação
         shell: pwsh
         run: |
-          Set-Location -Path "$PWD\app"
+          Push-Location "$PWD\app"
           $job = Start-Job -ScriptBlock { npm run dev }
           Start-Sleep -Seconds 10
+          Pop-Location
    
       - name: Checkout código
         uses: actions/checkout@v4
