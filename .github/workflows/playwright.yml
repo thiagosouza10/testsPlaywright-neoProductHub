@@ -30,9 +30,9 @@ jobs:
       - name: Start da aplicação
         shell: pwsh
         run: |
-          Start-Process -NoNewWindow -FilePath "npm" -ArgumentList "run dev" -WorkingDirectory "./app"
-          Start-Sleep -Seconds 10
-        working-directory: ./app
+          Set-Location -Path "./app"
+          Start-Process -NoNewWindow -FilePath "npm" -ArgumentList "run dev"
+          Start-Sleep -Seconds 10p
     
       - name: Checkout código
         uses: actions/checkout@v4
