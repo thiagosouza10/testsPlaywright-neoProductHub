@@ -46,15 +46,9 @@ jobs:
         run: npx playwright test
         working-directory: ./tests
 
-      - name: Publicando allure-report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: ./tests/allure-results
-
       - name: Gerando Allure Report
         run: |
+          dir
           npm install --save-dev allure-commandline
           npx allure generate ./tests/allure-results -o ./tests/allure-report --clean
         working-directory: ./tests
