@@ -29,9 +29,9 @@ jobs:
 
       - name: Start da aplicação
         shell: pwsh
+        working-directory: ${{ github.workspace }}\app
         run: |
-          cd $env:GITHUB_WORKSPACE\app
-          Start-Process npm -ArgumentList "run dev"
+          npm run dev &
           Start-Sleep -Seconds 10
    
       - name: Checkout código
