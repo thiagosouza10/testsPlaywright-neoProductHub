@@ -45,7 +45,6 @@ jobs:
       - name: Executando Testes
         run: npx playwright test
         working-directory: ./tests
-        continue-on-error: true
 
       - name: Publicando allure-report
         if: always()
