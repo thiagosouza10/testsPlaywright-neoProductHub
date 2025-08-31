@@ -9,6 +9,6 @@ test.describe('Frontend - Login', () => {
     await page.locator('#password').pressSequentially('admin');
     await page.getByRole('button', { name: 'Entrar' }).click();
     await expect(page.getByRole('heading', { name: 'Sistema de Produtos' })).toBeVisible();
-    await expect(page.getByText('Bem-vindo, Administradorr')).toBeVisible();
+    await expect(page.getByText('Bem-vindo, Administrador')).toBeVisible();
   });
 });  
