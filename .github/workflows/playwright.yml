@@ -28,11 +28,10 @@ jobs:
         working-directory: ./app
 
       - name: Start da aplicação
-        shell: pwsh
-        working-directory: ${{ github.workspace }}\app
         run: |
-          npm run dev &
-          Start-Sleep -Seconds 10
+          npm run dev
+          sleep 10
+        working-directory: ./app
    
       - name: Checkout código
         uses: actions/checkout@v4
