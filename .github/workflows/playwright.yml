@@ -59,4 +59,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./tests/allure-report
 
+      - name: URL do Allure Report
+        run: |
+          echo "Relatório disponível em\: https://thiagosouza10.github.io/testsPlaywright-neoProductHub/index.html"
+
+
         
