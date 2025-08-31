@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","72","Deve efetuar login com sucesso","backend","Sun Aug 31 02:28:49 UTC 2025","passed","Sun Aug 31 02:28:50 UTC 2025","Backend - Login","backend\login.spec.js","",""
-"","8871","Deve efetuar login com sucesso","frontend-chromium","Sun Aug 31 02:28:49 UTC 2025","passed","Sun Aug 31 02:28:58 UTC 2025","Frontend - Login","frontend\login.spec.js","",""
+"","80","Deve efetuar login com sucesso","backend","Sun Aug 31 02:47:42 UTC 2025","passed","Sun Aug 31 02:47:42 UTC 2025","Backend - Login","backend\login.spec.js","",""
+"","5823","Deve efetuar login com sucesso","frontend-chromium","Sun Aug 31 02:47:42 UTC 2025","passed","Sun Aug 31 02:47:48 UTC 2025","Frontend - Login","frontend\login.spec.js","",""
