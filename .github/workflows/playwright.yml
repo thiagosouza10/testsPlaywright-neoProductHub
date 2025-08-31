@@ -52,4 +52,15 @@ jobs:
         with:
           name: allure-report
           path: ./tests/allure-results
+
+      - name: Gerando Allure Report
+        run: npx allure generate ./tests/allure-results -o ./tests/allure-report --clean
+        working-directory: ./tests
+
+      - name: Publicar Allure Report no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./tests/allure-report
+
         
