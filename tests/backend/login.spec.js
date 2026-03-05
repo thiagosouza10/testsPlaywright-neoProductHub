@@ -7,7 +7,7 @@ test.describe('Backend - Login', () => {
     const response = await request.post('/api/auth/login', {
       data: {
         username: "admin",
-        password: "admin"
+        password: process.env.SENHA
       }
     });
     expect(response.status()).toBe(200);
