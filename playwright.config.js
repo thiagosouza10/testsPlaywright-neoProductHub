@@ -14,18 +14,16 @@ export default defineConfig({
 
   use: {
     trace: 'on-first-retry',
-    headless: false,
-    screenshot: 'on',
+    headless: true,
+    screenshot: 'only-on-failure',
   },
 
   projects: [
-    // Frontend - todos os browsers
     {
-      name: 'frontend-chromium',
+      name: 'frontend',
       testDir: './tests/frontend',
       use: { ...devices['Desktop Chrome'], baseURL: 'http://localhost:8080' },
     },
-    // API Backend
     {
       name: 'backend',
       testDir: './tests/backend',

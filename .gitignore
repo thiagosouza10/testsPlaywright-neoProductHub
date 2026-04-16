@@ -8,4 +8,3 @@ node_modules/
 playwright.env
 allure-results
 allure-report
-/history
