@@ -1,3 +1,0 @@
-{
-  "error": "Username e password são obrigatórios"
-}

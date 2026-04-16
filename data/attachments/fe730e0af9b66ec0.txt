@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Login realizado com sucesso",
+  "user": {
+    "id": "1",
+    "name": "Administrador",
+    "username": "admin",
+    "role": "admin",
+    "active": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "lastLogin": "2026-04-16T22:29:01.965Z"
+  }
+}
