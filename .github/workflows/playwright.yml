@@ -27,7 +27,7 @@ jobs:
         run: |
           Start-Process -FilePath "npm" -ArgumentList "run dev"
           Start-Sleep -Seconds 20
-          npxwait-on http://localhost:8080
+          npx wait-on http://localhost:8080
         working-directory: ./app
    
       - name: Checkout código
