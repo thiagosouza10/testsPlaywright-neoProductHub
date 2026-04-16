@@ -46,21 +46,25 @@ jobs:
       - name: Executando Testes
         run: npx playwright test
         working-directory: ./tests
-        continue-on-error: true
+        env:
+          SENHA: ${{ secrets.SENHA }}
 
       - name: Gerando Allure Report
+        if: always()
         run: |
           npm install --save-dev allure-commandline
           npx allure generate allure-results -o allure-report --clean
         working-directory: ./tests
 
       - name: Publicar Allure Report no GitHub Pages
+        if: always()
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./tests/allure-report
 
       - name: URL do Allure Report
+        if: always()
         run: |
           echo "Relatório disponível em\: https://thiagosouza10.github.io/testsPlaywright-neoProductHub/index.html"
 
