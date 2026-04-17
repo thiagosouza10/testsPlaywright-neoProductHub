@@ -1,13 +1,14 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../pages/login-page';
 
 test.describe('Frontend - Login', () => {
   test('Deve efetuar login com sucesso', async ({ page }) => {
+    // Arrange
+    const loginPage = new LoginPage(page);
     await page.goto('/login');
-    await page.getByText('Use credenciais cadastradas no sistema').isVisible();
-    await page.locator('#username').pressSequentially('admin');
-    await page.locator('#password').pressSequentially(process.env.SENHA);
-    await page.getByRole('button', { name: 'Entrar' }).click();
-    await expect(page.getByRole('heading', { name: 'Sistema de Produtos' })).toBeVisible();
+    // Act
+    await loginPage.fazerLogin('admin', process.env.SENHA);
+    // Assert
     await expect(page.getByText('Bem-vindo, Administrador')).toBeVisible();
   });
-});  
+});

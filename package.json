@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tests:backend": "npx playwright test --project=backend",
-    "tests:frontend": "npx playwright test --project=frontend-*",
+    "tests:frontend": "npx playwright test --project=frontend",
     "report:allure": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
     "allure-history": "xcopy /E /I /Y \"./allure-report/history\" \"./history\" || echo Nenhum histórico encontrado",
     "allure:prepare": "xcopy /E /I /Y \"./history\" \"./allure-results/history\" || echo Nenhum histórico encontrado",
